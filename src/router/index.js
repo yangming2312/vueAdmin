@@ -44,7 +44,6 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/permission/index',
     name: '权限测试',
-    icon: 'quanxian',
     meta: { role: ['admin'] },
     noDropDown: true,
     children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页', meta: { role: ['admin'] } }]
@@ -54,7 +53,6 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/permission/index',
     name: '组件',
-    icon: 'zujian',
     children: [
       { path: 'index', component: _import('permission/index'), name: '权限测试页' },
       { path: 'index', component: _import('permission/index'), name: '权限测试页' }
