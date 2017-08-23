@@ -7,6 +7,7 @@ import store from './store'                                //vuex
 import ElementUI from 'element-ui';                        //element组件库
 import 'element-ui/lib/theme-default/index.css';
 import IconSvg from 'components/icon-Svg'                  //全局图标组件
+import './assets/iconfont/iconfont'                          //svg图标库
 
 Vue.config.productionTip = false
 
