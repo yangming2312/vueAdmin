@@ -53,7 +53,7 @@
     left: 0;
     z-index: 1001;
     overflow-y: auto;
-    transition: width 0.35s ease-out;
+    transition: width 0.25s ease-out;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -62,6 +62,6 @@
   .main-container {
     min-height: 100%;
     margin-left: 180px;
-    transition: margin-left 0.35s ease-out;
+    transition: margin-left 0.25s ease-out;
   }
 </style>
