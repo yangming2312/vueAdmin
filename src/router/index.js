@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-const _import = require('./_import_' + process.env.NODE_ENV)
+import Vue from 'vue';
+import Router from 'vue-router';
+const _import = require('./_import_' + process.env.NODE_ENV);
 
-Vue.use(Router)
+Vue.use(Router);
 
-import Layout from '../views/layout/layout'
+import Layout from '../views/layout/layout';
 
 /**
  * 路由映射
@@ -30,10 +30,10 @@ export const constantRouterMap = [
 ];
 
 export default new Router({
-    //滚动行为,滚动顶部
+  // 滚动行为,滚动顶部
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
-})
+});
 
 /**
  *  配置的菜单
@@ -46,7 +46,7 @@ export const asyncRouterMap = [
     name: '权限测试',
     meta: { role: ['admin'] },
     noDropDown: true,
-    children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页', meta: { role: ['admin'] } }]
+    children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页', meta: { role: ['admin'] }}]
   },
   {
     path: '/permission',

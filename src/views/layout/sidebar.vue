@@ -1,14 +1,13 @@
 <template>
     <!--左侧菜单-->
-    <el-menu mode="vertical" theme="dark" :collapse="isCollapse" :default-active="$route.path">
+    <el-menu mode="vertical" theme="dark" unique-opened :collapse="isCollapse" :default-active="$route.path">
       <sidebar-item :routes="permission_routes"></sidebar-item>
     </el-menu>
-
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
-  import SidebarItem from './SidebarItem'
+  import { mapGetters } from 'vuex';
+  import SidebarItem from './SidebarItem';
 
   export default {
     components: {
@@ -23,5 +22,5 @@
         return this.sidebar.opened;
       }
     }
-  }
+  };
 </script>

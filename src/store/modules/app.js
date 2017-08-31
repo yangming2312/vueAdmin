@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
 
 const app = {
   state: {
@@ -7,7 +7,7 @@ const app = {
     }
   },
   mutations: {
-    //是否收起左侧菜单,使用js-cookie记录状态
+    // 是否收起左侧菜单,使用js-cookie记录状态
     TOGGLE_SIDEBAR: state => {
       if (state.sidebar.opened) {
         Cookies.set('sidebarStatus', 1);
@@ -24,4 +24,4 @@ const app = {
   }
 };
 
-export default app
+export default app;

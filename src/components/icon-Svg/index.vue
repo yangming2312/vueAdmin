@@ -16,10 +16,10 @@ export default {
   },
   computed: {
     iconName() {
-      //注意这里的用的是反引号``
+      // 注意这里的用的是反引号``
       return `#icon-${this.iconClass}`;
     }
   }
-}
+};
 </script>
 

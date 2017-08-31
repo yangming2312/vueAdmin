@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import { Sidebar, Navbar, AppMain } from 'views/layout'
+  import { Sidebar, Navbar, AppMain } from 'views/layout';
 
   export default {
     components: {
@@ -23,13 +23,13 @@
         return this.$store.state.app.sidebar;
       }
     }
-  }
+  };
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-  @import "src/styles/mixin.scss";
+  @import './src/styles/mixin.scss';
   .app-wrapper {
-    @include clearfix;
+    @include clearFix;
     position: relative;
     height: 100%;
     width: 100%;

@@ -1,15 +1,15 @@
-//The Vue build version to load with the `import` command
-//(runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import store from './store'                                //vuex
-import ElementUI from 'element-ui';                        //element组件库
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue';
+import App from './App';
+import router from './router';
+import store from './store';                      // vuex
+import ElementUI from 'element-ui';               // element组件库s
 import 'element-ui/lib/theme-default/index.css';
-import IconSvg from 'components/icon-Svg'                  //全局图标组件
-import './assets/iconfont/iconfont'                          //svg图标库
+import IconSvg from 'components/icon-Svg';        // 全局图标组件
+import './assets/iconfont/iconfont';              // svg图标库
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /**
  * 注册全局组件
@@ -24,4 +24,4 @@ new Vue({
   store,
   template: '<App/>',
   components: { App }
-})
+});

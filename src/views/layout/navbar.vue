@@ -5,8 +5,8 @@
 </template>
 
 <script>
-  import Hamburger from 'components/hamburger'
-  import { mapGetters } from 'vuex'
+  import Hamburger from 'components/hamburger';
+  import { mapGetters } from 'vuex';
 
   export default {
     components: {
@@ -22,7 +22,7 @@
         this.$store.dispatch('ToggleSideBar');
       }
     }
-  }
+  };
 
 </script>
 

@@ -16,13 +16,13 @@
 				<template v-for="(child,index) in item.children" v-if='!child.hidden'>
 
 					<sidebar-item :key="index" class='nest-menu' v-if='child.children&&child.children.length>0' :routes='[child]'> </sidebar-item>
-					
+
 					<router-link :key="index" v-else :to="item.path+'/'+child.path">
 						<el-menu-item :index="item.path+'/'+child.path">
 								<icon-svg v-if='child.icon' :icon-class="child.icon"></icon-svg><span>{{child.name}}</span>
 						</el-menu-item>
 					</router-link>
-				
+
 				</template>
 			</el-submenu>
 		</template>
@@ -37,5 +37,5 @@
         type: Array
       }
     }
-  }
+  };
 </script>
