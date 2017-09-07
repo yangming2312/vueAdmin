@@ -19,7 +19,7 @@
         'sidebar'
       ]),
       isCollapse() {
-        return this.sidebar.opened;
+        return !this.sidebar.opened;
       }
     }
   };
