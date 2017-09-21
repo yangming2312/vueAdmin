@@ -46,7 +46,7 @@ export const asyncRouterMap = [
     name: '权限测试',
     meta: { role: ['admin'] },
     noDropDown: true,
-    children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页', meta: { role: ['admin'] }}]
+    children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页' }]
   },
   {
     path: '/permission',

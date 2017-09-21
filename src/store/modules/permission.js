@@ -1,8 +1,11 @@
-import { asyncRouterMap } from '@/router';
+import { asyncRouterMap, constantRouterMap } from '@/router';
 
 const permission = {
   state: {
-    routes: asyncRouterMap
+    routes: constantRouterMap.concat(asyncRouterMap)
+  },
+  mutations: {
+
   }
 };
 export default permission;
