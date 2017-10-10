@@ -5,6 +5,21 @@
     <tab-view></tab-view>
     <error-log v-if="logs.length > 0" :logsList="logs" class="error-container"></error-log>
     <screen-full class="screenfull"></screen-full>
+
+    <el-dropdown class="avatar-container" trigger="click">
+      <div class="avatar-wrapper">
+        <img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'"/>
+        <i class="el-icon-caret-bottom"></i>
+      </div>
+
+      <el-dropdown-menu slot="dropdown">
+        <router-link class="inlineBlock" to="/">
+          <el-dropdown-item>首页</el-dropdown-item>
+        </router-link>
+
+        <el-dropdown-item divided><span @click="logout" style="display: block">退出登陆</span></el-dropdown-item>
+      </el-dropdown-menu>
+    </el-dropdown>
   </el-menu>
 </template>
 
@@ -27,7 +42,8 @@
     },
     computed: {
       ...mapGetters([
-        'sidebar'
+        'sidebar',
+        'avatar'
       ])
     },
     data() {
@@ -38,6 +54,9 @@
     methods: {
       toggleSideBar() {
         this.$store.dispatch('ToggleSideBar');
+      },
+      logout() {
+
       }
     }
   };
@@ -63,8 +82,30 @@
     .screenfull {
       position: absolute;
       top: 16px;
-      right: 90px;
+      right: 120px;
       color: red;
+    }
+    .avatar-container {
+      height: 50px;
+      display: inline-block;
+      position: absolute;
+      right: 35px;
+      .avatar-wrapper {
+        cursor: pointer;
+        margin-top: 5px;
+        position: relative;
+        .user-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+        }
+        .el-icon-caret-bottom {
+          position: absolute;
+          top: 25px;
+          right: -20px;
+          font-size: 12px;
+        }
+      }
     }
     .el-breadcrumb {
       display: inline-block;

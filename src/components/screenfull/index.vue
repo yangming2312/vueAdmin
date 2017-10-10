@@ -8,6 +8,8 @@
 </template>
 
 <script>
+  // import screenfull from 'screenfull';
+
   export default {
     name: 'hamburger',
     props: {
@@ -22,6 +24,16 @@
       fill: {
         type: String,
         default: '#48576a'
+      }
+    },
+    data() {
+      return {
+        isFullScreen: false
+      };
+    },
+    methods: {
+      click() {
+        alert('waiting...');
       }
     }
   };
